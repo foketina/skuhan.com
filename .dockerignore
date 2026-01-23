@@ -1,0 +1,58 @@
+# Git
+.git
+.gitignore
+
+# DDEV (local development)
+.ddev
+
+# IDE and editor files
+.idea
+.vscode
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation (not needed in production)
+*.md
+!README.md
+
+# Database dumps
+*.sql
+*.sql.gz
+backup/
+
+# Local environment files
+.env
+.env.local
+sites/default/settings.local.php
+sites/default/services.local.yml
+
+# Files directory (mounted as volume)
+sites/default/files/*
+!sites/default/files/.htaccess
+
+# Node modules (if any)
+node_modules
+
+# Test files
+tests/
+phpunit.xml
+phpcs.xml
+
+# Docker files (already in context)
+docker-compose*.yml
+!docker-compose.prod.yml
+
+# Temporary files
+tmp/
+temp/
+
+# Log files
+*.log
+
+# Cache
+.cache
