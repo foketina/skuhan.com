@@ -7,7 +7,8 @@ WORKDIR /app
 COPY composer.json composer.lock ./
 
 # Install dependencies without dev packages
-RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist
+# --ignore-platform-reqs because extensions are installed in the final stage
+RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist --ignore-platform-reqs
 
 # Copy the rest of the application
 COPY . .
