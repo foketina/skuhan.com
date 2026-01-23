@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Theme override to display a portfolio node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ * - label: (optional) The title of the node.
+ * - content: All node items.
+ * - url: Direct URL of the current node.
+ * - attributes: HTML attributes for the containing element.
+ * - content_attributes: Attributes for the main content tag.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - page: Flag for the full page state.
+ *
+ * @see template_preprocess_node()
+ * @see skuhan_preprocess_node()
+ */
+#}
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  <div{{ content_attributes.addClass('content', 'node-content-inner') }}>
+    {{ content.field_skuhan_portfolio_img }}
+    {{ content.body }}
+
+    <div class="project-details">
+      {{ content.field_skuhan_portfolio_client }}
+      {{ content.field_skuhan_portfolio_date }}
+      {{ content.field_skuhan_portfolio_skills }}
+      {{ content.field_skuhan_portfolio_tags }}
+      {{ content.field_skuhan_portfolio_url }}
+    </div>
+  </div>
+
+</article>
