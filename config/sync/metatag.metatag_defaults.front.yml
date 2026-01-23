@@ -9,3 +9,8 @@ label: 'Front page'
 tags:
   canonical_url: '[site:url]'
   shortlink: '[site:url]'
+  title: 'Jasmin Skuhan | Senior Drupal Developer in Brussels, Belgium'
+  description: 'Looking for a Drupal developer in Belgium? Jasmin Skuhan is a Senior Drupal Developer & Application Architect based in Brussels. Specializing in Drupal 10, custom modules, theming, and enterprise web applications.'
+  og_title: 'Jasmin Skuhan | Drupal Developer Belgium'
+  og_description: 'Senior Drupal Developer & Application Architect based in Brussels, Belgium. Available for freelance projects across Europe.'
+  og_type: website

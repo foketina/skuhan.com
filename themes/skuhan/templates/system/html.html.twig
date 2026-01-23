@@ -58,6 +58,39 @@
 <html {{ html_attributes }}>
   <head>
     <head-placeholder token="{{ placeholder_token|raw }}">
+    {# JSON-LD Structured Data for SEO #}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://skuhan.com/#person",
+          "name": "Jasmin Skuhan",
+          "jobTitle": "Senior Drupal Developer & Application Architect",
+          "url": "https://skuhan.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/jasminskuhan/",
+            "https://github.com/foketina"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Brussels",
+            "addressRegion": "Brussels-Capital",
+            "addressCountry": "BE"
+          },
+          "knowsAbout": ["Drupal 10", "PHP", "Custom Module Development", "Web Application Architecture", "Drupal Theming"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://skuhan.com/#website",
+          "name": "Jasmin Skuhan - Drupal Developer Belgium",
+          "url": "https://skuhan.com",
+          "publisher": {"@id": "https://skuhan.com/#person"}
+        }
+      ]
+    }
+    </script>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">

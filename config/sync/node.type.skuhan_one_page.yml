@@ -11,7 +11,7 @@ third_party_settings:
 name: 'One Page Presentation'
 type: skuhan_one_page
 description: 'One page presentation for skuhan.com'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

@@ -8,3 +8,4 @@ name: 'Languages Supported'
 vid: languages_supported
 description: 'The languages supported by the font.'
 weight: 0
+new_revision: false

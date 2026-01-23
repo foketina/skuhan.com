@@ -8,3 +8,4 @@ name: 'Font Tags'
 vid: font_tags
 description: 'The tags that came with the font.'
 weight: 0
+new_revision: false

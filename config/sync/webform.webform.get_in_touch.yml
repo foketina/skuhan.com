@@ -11,7 +11,7 @@ archive: false
 id: get_in_touch
 title: 'Get in touch'
 description: 'Get in touch webform'
-category: ''
+categories: {  }
 elements: |-
   your_name:
     '#type': textfield
@@ -128,6 +128,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -258,6 +260,7 @@ handlers:
       attachments: false
       twig: false
       theme_name: ''
+      langcode: ''
       parameters: {  }
       debug: false
 variants: {  }

@@ -6,5 +6,6 @@ dependencies:
     - fontyourface
 id: font.token
 label: Token
+description: ''
 targetEntityType: font
 cache: true

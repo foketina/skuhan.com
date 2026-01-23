@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.skuhan_blogs.body
+    - field.field.node.skuhan_blogs.field_s_b_image
+    - field.field.node.skuhan_blogs.field_s_b_tags
     - node.type.skuhan_blogs
   module:
     - text
@@ -27,4 +29,6 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_s_b_image: true
+  field_s_b_tags: true

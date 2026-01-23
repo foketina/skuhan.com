@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: skuhan_webform_blocks
 label: 'Webform Blocks'
-revision: 0
+revision: false
 description: 'Webform Blocks'

@@ -31,7 +31,8 @@
         "drupal/upgrade_status": "^4",
         "drupal/jquery_ui": "^1.8",
         "drupal/jquery_ui_draggable": "^2.1",
-        "drupal/jquery_ui_resizable": "^2.1"
+        "drupal/jquery_ui_resizable": "^2.1",
+        "drupal/simple_sitemap": "^4.2"
     },
     "extra": {
         "_readme": [

@@ -8,7 +8,16 @@ id: global
 label: Global
 tags:
   title: '[current-page:title] | [site:name]'
-  description: 'Personal portfolio of Jasmin Skuhan, Senior drupal developer, Application Architect'
+  description: 'Jasmin Skuhan - Senior Drupal Developer based in Brussels, Belgium. Expert in Drupal 10, custom module development, and web application architecture.'
   canonical_url: '[current-page:url]'
-  keywords: 'drupal developer, web application development, php, drupal, theming, custom module development'
+  keywords: 'drupal developer belgium, drupal developer brussels, senior drupal developer, drupal freelancer europe, php developer belgium, drupal 10 expert'
   robots: 'index, follow'
+  og_site_name: 'Jasmin Skuhan - Drupal Developer Belgium'
+  og_type: website
+  og_title: '[current-page:title]'
+  og_description: '[current-page:description]'
+  og_url: '[current-page:url]'
+  og_locale: en_BE
+  twitter_cards_type: summary
+  twitter_cards_title: '[current-page:title]'
+  twitter_cards_description: '[current-page:description]'

@@ -5,6 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.skuhan_portfolio.body
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_client
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_date
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_img
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_skills
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_tags
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_url
     - node.type.skuhan_portfolio
   module:
     - text
@@ -27,4 +33,10 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_skuhan_portfolio_client: true
+  field_skuhan_portfolio_date: true
+  field_skuhan_portfolio_img: true
+  field_skuhan_portfolio_skills: true
+  field_skuhan_portfolio_tags: true
+  field_skuhan_portfolio_url: true
