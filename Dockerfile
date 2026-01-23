@@ -89,8 +89,9 @@ RUN mkdir -p /var/www/html/sites/default/files \
     && chown -R www-data:www-data /var/www/html/sites/default/files \
     && chmod 755 /var/www/html/sites/default/files
 
-# Install Drush globally for easier access
-RUN cp /var/www/html/vendor/bin/drush /usr/local/bin/drush \
+# Create Drush wrapper for global access
+RUN echo '#!/bin/sh' > /usr/local/bin/drush \
+    && echo 'exec /var/www/html/vendor/bin/drush "$@"' >> /usr/local/bin/drush \
     && chmod +x /usr/local/bin/drush
 
 # Expose port 80

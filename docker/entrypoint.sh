@@ -91,15 +91,15 @@ chmod -R 755 /var/www/html/sites/default/files
 
 # Run Drupal updates if database is initialized
 echo "==> Checking if Drupal is installed..."
-if drush status bootstrap 2>/dev/null | grep -q "Successful"; then
+if /var/www/html/vendor/bin/drush status bootstrap 2>/dev/null | grep -q "Successful"; then
     echo "==> Running database updates..."
-    drush updatedb -y --no-interaction || true
+    /var/www/html/vendor/bin/drush updatedb -y --no-interaction || true
 
     echo "==> Importing configuration..."
-    drush config:import -y --no-interaction || true
+    /var/www/html/vendor/bin/drush config:import -y --no-interaction || true
 
     echo "==> Clearing cache..."
-    drush cache:rebuild -y --no-interaction || true
+    /var/www/html/vendor/bin/drush cache:rebuild -y --no-interaction || true
 
     echo "==> Drupal updates complete!"
 else
