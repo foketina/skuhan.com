@@ -11,14 +11,14 @@
         "drupal/paragraphs": "^1.14",
         "drupal/field_group": "^4",
         "drupal/views_fieldsets": "^4",
-        "drupal/webform": "^6.1",
+        "drupal/webform": "^6.2",
         "drupal/telephone_validation": "^2.3",
         "drupal/captcha": "^1.2",
         "drupal/recaptcha": "^3",
-        "drupal/metatag": "^2",
+        "drupal/metatag": "^2.0",
         "drupal/token": "^1.10",
         "drupal/google_analytics": "^4",
-        "drush/drush": "^12.0",
+        "drush/drush": "^13",
         "drupal/core-recommended": "^10",
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-project-message": "^10",
@@ -26,7 +26,8 @@
         "drupal/bootstrap": "^3.24",
         "drupal/menu_link_attributes": "^1.2",
         "drupal/views_bootstrap": "^4.3",
-        "drupal/viewsreference": "2.0.0-beta10"
+        "drupal/viewsreference": "2.0.0-beta10",
+        "drupal/social_media": "^2.0"
     },
     "extra": {
         "_readme": [

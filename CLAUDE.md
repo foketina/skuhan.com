@@ -54,6 +54,34 @@ skuhan/
 └── .ddev/                          # DDEV configuration (gitignored)
 ```
 
+### Git & Composer Management
+
+**What's committed to Git:**
+- `config/sync/` - Drupal configuration
+- `modules/custom/` - Custom modules
+- `themes/skuhan/` - Custom theme
+- `composer.json` & `composer.lock` - Dependency definitions
+
+**What's NOT committed (managed by Composer):**
+- `/core/` - Drupal core
+- `/vendor/` - PHP dependencies
+- `/modules/contrib/` - Contributed modules
+- `/themes/contrib/` - Contributed themes
+- `/themes/bootstrap/` - Bootstrap base theme
+- `/profiles/contrib/` - Contributed profiles
+
+**After cloning, run:**
+```bash
+composer install
+```
+This downloads all dependencies defined in `composer.lock`.
+
+**Adding new modules:**
+```bash
+ddev composer require drupal/module_name
+# Then commit the updated composer.json and composer.lock
+```
+
 ### Naming Conventions
 
 | Entity Type | Convention | Example |
