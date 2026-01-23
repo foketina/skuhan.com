@@ -51,6 +51,15 @@ skuhan/
 │       └── files/                  # Uploaded files
 ├── vendor/                         # Composer dependencies
 ├── composer.json                   # PHP dependencies
+├── docs/                           # Project documentation
+│   └── PROD_DEPLOYMENT.md          # Production deployment guide
+├── docker/                         # Docker configuration files
+│   ├── nginx.conf                  # Nginx configuration
+│   ├── php.ini                     # PHP settings
+│   ├── supervisord.conf            # Process manager config
+│   └── entrypoint.sh               # Container startup script
+├── Dockerfile                      # Production Docker image
+├── docker-compose.yaml             # Docker Compose for Coolify
 └── .ddev/                          # DDEV configuration (gitignored)
 ```
 
@@ -1407,3 +1416,36 @@ Located in `themes/skuhan/assets/libraries/`:
 | `skuhan_year` | Year only |
 | `skuhan_day` | Day number |
 | `skuhan_month` | Month name |
+
+---
+
+## Documentation
+
+Additional documentation is available in the `docs/` directory:
+
+| Document | Description |
+|----------|-------------|
+| [PROD_DEPLOYMENT.md](docs/PROD_DEPLOYMENT.md) | Production deployment guide for Coolify/Hetzner VPS |
+
+## Production Deployment
+
+The site is deployed to Hetzner VPS using Coolify with Docker Compose.
+
+**Key files:**
+- `Dockerfile` - Multi-stage build (composer + nginx/PHP-FPM)
+- `docker-compose.yaml` - Production services (app + MariaDB)
+- `docker/` - nginx, PHP, supervisord, and entrypoint configurations
+
+**Quick reference:**
+```bash
+# SSH to VPS and run drush
+docker exec <app-container> /var/www/html/vendor/bin/drush cr
+
+# View logs
+docker logs <app-container>
+
+# Restart container
+docker restart <app-container>
+```
+
+See [docs/PROD_DEPLOYMENT.md](docs/PROD_DEPLOYMENT.md) for complete deployment instructions.
