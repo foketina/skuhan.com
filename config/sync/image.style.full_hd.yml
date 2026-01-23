@@ -1,0 +1,15 @@
+uuid: a1b8bb72-8913-491d-97cc-3afabd457b8e
+langcode: en
+status: true
+dependencies: {  }
+name: full_hd
+label: 'Full HD'
+effects:
+  562b20e6-0b92-42e8-808e-9220d452f3fb:
+    uuid: 562b20e6-0b92-42e8-808e-9220d452f3fb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1080
+      anchor: center-top

@@ -1,0 +1,23 @@
+uuid: 992e2919-a875-4771-852b-837d00a3b376
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skuhan_portfolio_url
+    - node.type.skuhan_portfolio
+  module:
+    - link
+id: node.skuhan_portfolio.field_skuhan_portfolio_url
+field_name: field_skuhan_portfolio_url
+entity_type: node
+bundle: skuhan_portfolio
+label: 'Live URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

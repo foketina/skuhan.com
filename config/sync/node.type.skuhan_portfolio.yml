@@ -1,0 +1,17 @@
+uuid: 7ea46721-82b3-48f1-93db-047a2e807594
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Portfolio
+type: skuhan_portfolio
+description: 'Portfolio content type for skuhan.com'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

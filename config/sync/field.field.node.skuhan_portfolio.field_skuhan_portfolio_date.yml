@@ -1,0 +1,21 @@
+uuid: e48b135c-ba91-4d49-90b9-036c22b31808
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skuhan_portfolio_date
+    - node.type.skuhan_portfolio
+  module:
+    - datetime
+id: node.skuhan_portfolio.field_skuhan_portfolio_date
+field_name: field_skuhan_portfolio_date
+entity_type: node
+bundle: skuhan_portfolio
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

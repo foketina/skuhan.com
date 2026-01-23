@@ -1,0 +1,20 @@
+uuid: 4c5b4e57-a4bc-4a5d-85b9-7b1efc2858a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+id: paragraph.field_skuhan_p_nc_numbers
+field_name: field_skuhan_p_nc_numbers
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

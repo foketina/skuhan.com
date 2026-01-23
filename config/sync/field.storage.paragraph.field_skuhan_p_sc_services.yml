@@ -1,0 +1,20 @@
+uuid: 531a2d9a-9fa8-4706-b8bc-39f80bf13eb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+id: paragraph.field_skuhan_p_sc_services
+field_name: field_skuhan_p_sc_services
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

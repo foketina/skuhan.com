@@ -1,0 +1,21 @@
+uuid: 51991779-d613-45d6-9a87-7140358989bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_s_p_services_icon
+field_name: field_s_p_services_icon
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

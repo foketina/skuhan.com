@@ -1,0 +1,88 @@
+{
+    "name": "drupal/drupal",
+    "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "composer/installers": "^1.0.24",
+        "drupal/admin_toolbar": "^3.1",
+        "drupal/fontyourface": "^4",
+        "drupal/context": "5.0.0-rc2",
+        "drupal/paragraphs": "^1.14",
+        "drupal/field_group": "^4",
+        "drupal/views_fieldsets": "^4",
+        "drupal/webform": "^6.1",
+        "drupal/telephone_validation": "^2.3",
+        "drupal/captcha": "^1.2",
+        "drupal/recaptcha": "^3",
+        "drupal/metatag": "^2",
+        "drupal/token": "^1.10",
+        "drupal/google_analytics": "^4",
+        "drush/drush": "^12.0",
+        "drupal/core-recommended": "^10",
+        "drupal/core-composer-scaffold": "^10",
+        "drupal/core-project-message": "^10",
+        "drupal/pathauto": "^1.11",
+        "drupal/bootstrap": "^3.24",
+        "drupal/menu_link_attributes": "^1.2",
+        "drupal/views_bootstrap": "^4.3",
+        "drupal/viewsreference": "2.0.0-beta10"
+    },
+    "extra": {
+        "_readme": [
+            "By default Drupal loads the autoloader from ./vendor/autoload.php.",
+            "To change the autoloader you can edit ./autoload.php.",
+            "This file specifies the packages.drupal.org repository.",
+            "You can read more about this composer repository at:",
+            "https://www.drupal.org/node/2718229"
+        ],
+        "installer-paths": {
+            "core": [
+                "type:drupal-core"
+            ],
+            "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
+        }
+    },
+    "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
+    "require-dev": {
+        "drupal/devel": "^5"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true
+        }
+    }
+}

@@ -1,0 +1,29 @@
+uuid: 2dbc05d5-7fdf-45a4-9046-364a0ca622a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skuhan_portfolio_skills
+    - node.type.skuhan_portfolio
+    - taxonomy.vocabulary.skuhan_skills
+id: node.skuhan_portfolio.field_skuhan_portfolio_skills
+field_name: field_skuhan_portfolio_skills
+entity_type: node
+bundle: skuhan_portfolio
+label: Skills
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      skuhan_skills: skuhan_skills
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

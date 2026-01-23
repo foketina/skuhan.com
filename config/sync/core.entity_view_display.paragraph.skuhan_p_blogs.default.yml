@@ -1,0 +1,24 @@
+uuid: b88ca3af-5e44-44ac-ab9f-3046c44e419e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_blogs.field_s_p_blogs
+    - paragraphs.paragraphs_type.skuhan_p_blogs
+  module:
+    - viewsreference
+id: paragraph.skuhan_p_blogs.default
+targetEntityType: paragraph
+bundle: skuhan_p_blogs
+mode: default
+content:
+  field_s_p_blogs:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

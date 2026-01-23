@@ -1,0 +1,52 @@
+uuid: 9c2d52eb-17ee-45f4-a5d7-bb10d892577b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_skuhan_p_nc_numbers
+    - paragraphs.paragraphs_type.skuhan_p_numbers
+    - paragraphs.paragraphs_type.skuhan_p_numbers_container
+  module:
+    - entity_reference_revisions
+id: paragraph.skuhan_p_numbers_container.field_skuhan_p_nc_numbers
+field_name: field_skuhan_p_nc_numbers
+entity_type: paragraph
+bundle: skuhan_p_numbers_container
+label: Numbers
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      skuhan_p_numbers: skuhan_p_numbers
+    negate: 0
+    target_bundles_drag_drop:
+      skuhan_p_about:
+        weight: 9
+        enabled: false
+      skuhan_p_about_skills:
+        weight: 10
+        enabled: false
+      skuhan_p_numbers:
+        weight: 11
+        enabled: true
+      skuhan_p_numbers_container:
+        weight: 12
+        enabled: false
+      skuhan_p_portfolio:
+        weight: 13
+        enabled: false
+      skuhan_p_services:
+        weight: 14
+        enabled: false
+      skuhan_p_services_container:
+        weight: 15
+        enabled: false
+      skuhan_p_slideshow:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

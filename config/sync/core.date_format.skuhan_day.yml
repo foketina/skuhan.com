@@ -1,0 +1,8 @@
+uuid: 9c7df9e0-ac19-4d3f-a3f9-a7438f73d6bd
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_day
+label: 'Skuhan Day'
+locked: false
+pattern: j

@@ -1,0 +1,9 @@
+uuid: 681941b1-3ec4-4dad-965b-6972aa9e742a
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_bckg_img
+label: 'Background Image Stripe'
+icon_uuid: null
+description: 'Background image stripe for one page portfolio content type.'
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+uuid: c1fb309f-1253-4641-9e88-fe915aad3617
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: portfolio
+label: Portfolio
+type: 'canonical_entities:node'
+pattern: 'portfolio/[node:title]'
+selection_criteria:
+  cce05a6a-caaa-4a2b-ac1e-47e07135e0e7:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: cce05a6a-caaa-4a2b-ac1e-47e07135e0e7
+    context_mapping:
+      node: node
+    bundles:
+      skuhan_portfolio: skuhan_portfolio
+selection_logic: and
+weight: -5
+relationships: {  }

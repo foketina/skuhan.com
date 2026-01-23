@@ -1,0 +1,19 @@
+uuid: d498ea9c-7d64-4466-b7df-bb4b1dee7124
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_services_icon
+    - paragraphs.paragraphs_type.skuhan_p_services
+id: paragraph.skuhan_p_services.field_s_p_services_icon
+field_name: field_s_p_services_icon
+entity_type: paragraph
+bundle: skuhan_p_services
+label: Icon
+description: 'Paste code from <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">Font Awesome</a> librabry.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

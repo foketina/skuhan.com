@@ -1,0 +1,456 @@
+/* Extra small devices (phones, 460px and down) */
+@media only screen and (max-width: 767px) {
+  /*Back to top*/
+  .back-top {
+    display: none !important;
+  }
+  /*Mobile Header logo and nav*/
+  header#navbar {
+    .skuhan-header-container {
+      .navbar-header {
+        section.skuhan-logo {
+          position: relative;
+          top: 4px;
+        }
+        button.navbar-toggle {
+          margin-top: 0;
+          margin-bottom: 0;
+          border: 0px;
+          &:hover,
+          &:focus {
+            background-color: transparent;
+          }
+          i {
+            font-size: 2em;
+            color: $c-font-black;
+          }
+        }
+      }
+      #navbar-collapse {
+        float: none;
+        .skuhan-main-menu {
+          ul.menu--skuhan-main-menu {
+            text-align: left;
+            padding: 20px 0;
+            li {
+              display: block;
+              a {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*Stripes*/
+  .skuhan-wrapper {
+    // Slideshow
+    #slideshow {
+      .paragraph-content {
+        .paragraph-content-inner {
+          h1 {
+            font-size: 30px;
+          }
+          .slideshow-type {
+            display: none;
+            h3 {
+              font-size: 24px;
+            }
+          }
+          .slideshow-desc {
+            .field--name-field-s-p-slide-desc {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    // About
+    #about {
+      .paragraph-content {
+        padding: 40px 20px;
+        .paragraph-content-inner {
+          .section-title {
+            h2.big-title {
+              font-size: 30px;
+            }
+            .subtitle {
+              font-size: 1em;
+            }
+          }
+          .about-desc {
+            font-size: 14px; 
+          }
+        }
+      }
+    }
+    // Portfolio
+    #portfolio {
+      position: relative;
+      .portfolio-title {
+        font-size: 30px;
+      }
+    }
+    // Services
+    #services {
+      .paragraph-content {
+        .field--name-field-skuhan-p-sc-title {
+          font-size: 30px;
+        }
+        .field--name-field-skuhan-p-sc-services {
+          .services-inner {
+            .service-box {
+              h3 {
+                font-size: 20px;
+              }
+              .service-desc {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // Numbers
+    #numbers {
+      .paragraph-content {
+        padding: 40px 0;
+        .paragraph {
+          .count-number {
+            font-size: 42px;
+            margin: 0;
+          }
+        }
+      }
+    }
+    // Experience
+    #experience {
+      .paragraph-content {
+        .field--name-field-skuhan-p-ec-title {
+          margin-bottom: 40px;
+          font-size: 30px;
+        }
+        .timeline-section {
+          margin-top: -10px;
+          &:before {
+            content: none;
+          }
+          &:after {
+            content: none;
+          }
+          .timeline-row  {
+            margin-top: 30px;
+            padding-top: 37px;
+            &:before {
+              content: none;
+            }
+            &:nth-child(2n) {
+              .timeline-col {
+                float: none;
+                .field--name-field-s-p-experience-date {
+                  left: 50%;
+                  top: 0;
+                  -webkit-transform: translate(-50%,0);
+                  transform: translate(-50%,0);
+                  margin: -37px 0 0;
+                  z-index: 1;
+                }
+              }
+            }
+            .timeline-col {
+              float: none;
+              width: 100%;
+              padding: 0 15px;
+              .field--name-field-s-p-experience-date {
+                left: 50%;
+                top: 0;
+                -webkit-transform: translate(-50%,0);
+                transform: translate(-50%,0);
+                margin: -37px 0 0;
+                z-index: 1;
+                .dates-container {
+                  time {
+                    
+                  }
+                }
+              }
+              .timeline-box {
+                padding: 55px 20px 25px;
+                .field--name-field-s-p-experience-title {
+                  font-size: 20px;
+                  text-align: center;
+                }
+                .field--name-field-s-p-experience-company{
+                  font-size: 15px;
+                  text-align: center;
+                }
+                .field--name-field-s-p-experience-desc {
+                  font-size: 14px;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // Want to work with me.
+    .paragraph.paragraph--type--skuhan-p-bckg-img {
+      .paragraph-content {
+        .field--name-field-s-p-bckg-img-title {
+          font-size: 34px;
+        }
+      }
+    }
+    // Blogs.
+    #blogs {
+      .paragraph-content {
+        padding: 40px 15px;
+        .view-header {
+          font-size: 30px;
+          margin-bottom: 40px;
+        }
+        .view-content {
+          .blog-col {
+            margin-bottom: 30px;
+            .blog-details {
+              .views-field-title {
+                a {
+                  font-size: 19px;
+                }
+              }
+              .views-field-body {
+                font-size: 14px;
+              }
+              .views-field-field-s-b-tags {
+                a {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // Contact
+    #contact {
+      h2.block-title {
+        margin-bottom: 40px;
+        font-size: 30px;
+      }
+      .field--name-field-s-blocks-ref-webform {
+        form {
+          .form-item {
+            input.form-text,
+            input.form-email {
+              font-size: 14px;
+            }
+            textarea.form-textarea {
+              font-size: 14px;
+            }
+          }
+          #edit-actions {
+            text-align: center;
+            button {
+              font-size: 15px;
+              line-height: 44px;
+            }
+          }
+        }
+      }
+    }
+    // Footer
+    footer.footer {
+      .field--name-body {
+        .skuhan-logo {
+          text-align: center;
+          a {
+            display: block;
+            .first-letter {
+              color: $c-font-red;
+            } 
+          }
+        }
+        .text-center {
+          text-align: center;
+          margin-bottom: 20px;
+          display: block;
+          font-size: 14px;
+        }
+        .social-links {
+          justify-content: center;
+          display: flex;
+        }
+      }
+    }
+  }
+  /* Node Portfolio*/
+  .skuhan-wrapper {
+    article.skuhan-portfolio {
+      padding: 35px 0;
+      .field-node-title {
+        h3 {
+          font-size: 24px;
+        }
+      }
+      .content.node-content-inner {
+        .field--name-body {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  /*Node Blogs*/
+  .skuhan-wrapper {
+    article.skuhan-blogs {
+      .node-container {
+        .blog-title {
+          font-size: 18px;
+        }
+        .content {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  /*Header*/
+  .skuhan-wrapper {
+    header#navbar {
+      #navbar-collapse {
+        margin-top: 10px;
+        .skuhan-main-menu {
+          ul.menu--skuhan-main-menu { 
+            li {
+              a {
+                padding: 3px;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*Stripes*/
+  .skuhan-wrapper {
+    // About
+    #about {
+      .paragraph-content {
+        padding: 40px 20px;
+        .paragraph-content-inner {
+          .section-title {
+            h2.big-title {
+              font-size: 40px;
+            }
+            .subtitle {
+              font-size: 1.3em;
+            }
+          }
+          .about-desc {
+            font-size: 16px; 
+          }
+        }
+      }
+    }
+    // Portfolio
+    #portfolio {
+      position: relative;
+      .portfolio-title {
+        font-size: 30px;
+      }
+    }
+    // Services
+    #services {
+      .paragraph-content {
+        .field--name-field-skuhan-p-sc-services {
+          .services-inner {
+            .service-box {
+              h3 {
+                font-size: 22px;
+              }
+              .service-desc {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // Numbers
+    #numbers {
+      .paragraph-content {
+        .paragraph {
+          .count-number {
+            font-size: 42px;
+            margin: 0;
+          }
+        }
+      }
+    }
+    // Blogs.
+    #blogs {
+      .paragraph-content {
+        padding: 60px 15px;
+        .view-header {
+        }
+        .view-content {
+          .blog-col {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+    // Contact
+    #contact {
+      h2.block-title {
+      }
+      .field--name-field-s-blocks-ref-webform {
+        form {
+          #edit-actions {
+            button {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    // Footer
+    footer.footer {
+      .field--name-body {
+        .skuhan-logo {
+          text-align: center;
+          a {
+            display: block;
+            .first-letter {
+              color: $c-font-red;
+            } 
+          }
+        }
+        .text-center {
+          text-align: center;
+          margin-bottom: 20px;
+          display: block;
+          font-size: 14px;
+        }
+        .social-links {
+          justify-content: center;
+          display: flex;
+        }
+      }
+    }
+  }
+  /* Node Portfolio*/
+  .skuhan-wrapper {
+    article.skuhan-portfolio {
+      padding: 65px 0;
+    }
+  }
+}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}

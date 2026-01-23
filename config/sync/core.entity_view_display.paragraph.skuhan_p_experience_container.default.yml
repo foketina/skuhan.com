@@ -1,0 +1,33 @@
+uuid: 0b899fd7-d4c4-470e-9061-a04982b8520b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_experience_container.field_skuhan_p_ec_experieces
+    - field.field.paragraph.skuhan_p_experience_container.field_skuhan_p_ec_title
+    - paragraphs.paragraphs_type.skuhan_p_experience_container
+  module:
+    - entity_reference_revisions
+id: paragraph.skuhan_p_experience_container.default
+targetEntityType: paragraph
+bundle: skuhan_p_experience_container
+mode: default
+content:
+  field_skuhan_p_ec_experieces:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_skuhan_p_ec_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

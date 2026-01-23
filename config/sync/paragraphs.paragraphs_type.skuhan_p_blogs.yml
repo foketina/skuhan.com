@@ -1,0 +1,9 @@
+uuid: 28446b59-a447-4041-9bc7-c53ca4423ddd
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_blogs
+label: Blogs
+icon_uuid: null
+description: 'Blogs stripe based on a view for one page presentation content type.'
+behavior_plugins: {  }

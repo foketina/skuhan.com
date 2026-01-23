@@ -1,0 +1,31 @@
+uuid: 388b3edb-9469-4946-8bd4-d79faae9c984
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_about_skills.field_s_p_skills_procent
+    - field.field.paragraph.skuhan_p_about_skills.field_s_p_skills_type
+    - paragraphs.paragraphs_type.skuhan_p_about_skills
+id: paragraph.skuhan_p_about_skills.default
+targetEntityType: paragraph
+bundle: skuhan_p_about_skills
+mode: default
+content:
+  field_s_p_skills_procent:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_s_p_skills_type:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

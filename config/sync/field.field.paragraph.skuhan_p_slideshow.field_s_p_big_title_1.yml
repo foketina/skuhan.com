@@ -1,0 +1,19 @@
+uuid: 3387850f-f824-42d8-bdb5-d8e4b950dbdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_big_title_1
+    - paragraphs.paragraphs_type.skuhan_p_slideshow
+id: paragraph.skuhan_p_slideshow.field_s_p_big_title_1
+field_name: field_s_p_big_title_1
+entity_type: paragraph
+bundle: skuhan_p_slideshow
+label: 'First part of big title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

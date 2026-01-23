@@ -1,0 +1,6 @@
+name: 'Skuhan Global'
+type: module
+description: 'Skuhan.com Global module'
+core: 9.x
+core_version_requirement: ^9.5 || ^10 || ^11
+package: 'skuhan.com'

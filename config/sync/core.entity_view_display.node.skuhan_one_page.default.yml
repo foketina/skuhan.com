@@ -1,0 +1,30 @@
+uuid: f3139ad0-f30b-4866-941f-a3f5e9c4171d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.skuhan_one_page.field_s_op_stripes
+    - node.type.skuhan_one_page
+  module:
+    - entity_reference_revisions
+    - user
+id: node.skuhan_one_page.default
+targetEntityType: node
+bundle: skuhan_one_page
+mode: default
+content:
+  field_s_op_stripes:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

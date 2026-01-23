@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* BASE */
+/* variables, fonts, mixins, helpers... common styles used across the entire site */
+@import 'base/__base';
+
+/* COMPONENTS */
+/* Main components such as menu, headers etc. */
+@import 'components/__components';
+
+/* VENDORS */
+/* styles reset (normalize) and third party scss entry point */
+//@import 'vendors/__vendors';
+
+/* PAGES */
+/* components from pages */
+@import 'pages/__pages';
+
+
+/* LAYOUT */
+/* Main parts (footer, header, ...) */
+//@import 'layout/__layout';
+
+
+/* PAGES */
+/* Specific pages styles  (homepage, level1, ...) */
+//@import 'pages/__pages';
+//@import 'pages/__programme-guide'

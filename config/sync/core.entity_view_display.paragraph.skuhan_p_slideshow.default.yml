@@ -1,0 +1,47 @@
+uuid: 29e0961d-2cd1-41f8-b1a7-fdbdf704f3e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_slideshow.field_s_p_big_title_1
+    - field.field.paragraph.skuhan_p_slideshow.field_s_p_big_title_2
+    - field.field.paragraph.skuhan_p_slideshow.field_s_p_slide_desc
+    - field.field.paragraph.skuhan_p_slideshow.field_s_p_typed_label
+    - paragraphs.paragraphs_type.skuhan_p_slideshow
+id: paragraph.skuhan_p_slideshow.default
+targetEntityType: paragraph
+bundle: skuhan_p_slideshow
+mode: default
+content:
+  field_s_p_big_title_1:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_s_p_big_title_2:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_s_p_slide_desc:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_s_p_typed_label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

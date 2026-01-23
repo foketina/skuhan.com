@@ -1,0 +1,46 @@
+uuid: 50a1fab1-0817-4015-8f97-059623d85375
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_skuhan_p_sc_services
+    - paragraphs.paragraphs_type.skuhan_p_services
+    - paragraphs.paragraphs_type.skuhan_p_services_container
+  module:
+    - entity_reference_revisions
+id: paragraph.skuhan_p_services_container.field_skuhan_p_sc_services
+field_name: field_skuhan_p_sc_services
+entity_type: paragraph
+bundle: skuhan_p_services_container
+label: Services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      skuhan_p_services: skuhan_p_services
+    negate: 0
+    target_bundles_drag_drop:
+      skuhan_p_about:
+        weight: 7
+        enabled: false
+      skuhan_p_about_skills:
+        weight: 8
+        enabled: false
+      skuhan_p_portfolio:
+        weight: 9
+        enabled: false
+      skuhan_p_services:
+        weight: 10
+        enabled: true
+      skuhan_p_services_container:
+        weight: 11
+        enabled: false
+      skuhan_p_slideshow:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

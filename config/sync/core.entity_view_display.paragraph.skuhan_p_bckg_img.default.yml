@@ -1,0 +1,55 @@
+uuid: bc55430a-a04d-41b5-a1dc-946c6a6dd0d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_bckg_img.field_s_p_bckg_img_desc
+    - field.field.paragraph.skuhan_p_bckg_img.field_s_p_bckg_img_img
+    - field.field.paragraph.skuhan_p_bckg_img.field_s_p_bckg_img_link
+    - field.field.paragraph.skuhan_p_bckg_img.field_s_p_bckg_img_title
+    - paragraphs.paragraphs_type.skuhan_p_bckg_img
+  module:
+    - image
+    - link
+id: paragraph.skuhan_p_bckg_img.default
+targetEntityType: paragraph
+bundle: skuhan_p_bckg_img
+mode: default
+content:
+  field_s_p_bckg_img_desc:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_s_p_bckg_img_img:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_s_p_bckg_img_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_s_p_bckg_img_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

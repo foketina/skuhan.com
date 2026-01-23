@@ -1,0 +1,78 @@
+uuid: 53333814-9a81-42b7-bd0e-36cdb7ecab1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_s_op_stripes
+    - node.type.skuhan_one_page
+    - paragraphs.paragraphs_type.skuhan_p_about
+    - paragraphs.paragraphs_type.skuhan_p_bckg_img
+    - paragraphs.paragraphs_type.skuhan_p_blogs
+    - paragraphs.paragraphs_type.skuhan_p_experience_container
+    - paragraphs.paragraphs_type.skuhan_p_numbers_container
+    - paragraphs.paragraphs_type.skuhan_p_portfolio
+    - paragraphs.paragraphs_type.skuhan_p_services_container
+    - paragraphs.paragraphs_type.skuhan_p_slideshow
+  module:
+    - entity_reference_revisions
+id: node.skuhan_one_page.field_s_op_stripes
+field_name: field_s_op_stripes
+entity_type: node
+bundle: skuhan_one_page
+label: Stripes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      skuhan_p_slideshow: skuhan_p_slideshow
+      skuhan_p_about: skuhan_p_about
+      skuhan_p_portfolio: skuhan_p_portfolio
+      skuhan_p_services_container: skuhan_p_services_container
+      skuhan_p_numbers_container: skuhan_p_numbers_container
+      skuhan_p_bckg_img: skuhan_p_bckg_img
+      skuhan_p_experience_container: skuhan_p_experience_container
+      skuhan_p_blogs: skuhan_p_blogs
+    negate: 0
+    target_bundles_drag_drop:
+      skuhan_p_about:
+        weight: 3
+        enabled: true
+      skuhan_p_about_skills:
+        weight: 6
+        enabled: false
+      skuhan_p_bckg_img:
+        weight: 14
+        enabled: true
+      skuhan_p_blogs:
+        weight: 16
+        enabled: true
+      skuhan_p_experience:
+        weight: 13
+        enabled: false
+      skuhan_p_experience_container:
+        weight: 14
+        enabled: true
+      skuhan_p_numbers:
+        weight: 11
+        enabled: false
+      skuhan_p_numbers_container:
+        weight: 12
+        enabled: true
+      skuhan_p_portfolio:
+        weight: 7
+        enabled: true
+      skuhan_p_services:
+        weight: 9
+        enabled: false
+      skuhan_p_services_container:
+        weight: 11
+        enabled: true
+      skuhan_p_slideshow:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

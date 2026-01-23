@@ -1,0 +1,19 @@
+uuid: 36ce7e90-7402-4b1b-aafa-4d863c4e41a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_skills_type
+    - paragraphs.paragraphs_type.skuhan_p_about_skills
+id: paragraph.skuhan_p_about_skills.field_s_p_skills_type
+field_name: field_s_p_skills_type
+entity_type: paragraph
+bundle: skuhan_p_about_skills
+label: 'Skill type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

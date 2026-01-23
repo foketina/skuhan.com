@@ -1,0 +1,8 @@
+uuid: 86e541fd-9312-49ce-8640-6b802eab4486
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_year
+label: 'Skuhan Year'
+locked: false
+pattern: 'Y'

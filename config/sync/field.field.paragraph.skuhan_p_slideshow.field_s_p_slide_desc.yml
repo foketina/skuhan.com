@@ -1,0 +1,19 @@
+uuid: 4ef70f71-238a-4ac5-957f-1aef3c59da71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_slide_desc
+    - paragraphs.paragraphs_type.skuhan_p_slideshow
+id: paragraph.skuhan_p_slideshow.field_s_p_slide_desc
+field_name: field_s_p_slide_desc
+entity_type: paragraph
+bundle: skuhan_p_slideshow
+label: 'Short description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

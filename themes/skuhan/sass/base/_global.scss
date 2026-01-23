@@ -1,0 +1,215 @@
+/*General*/
+body {
+  font-family: $font-stack;
+  font-size: $font-size;
+  color: $c-font-default;
+  margin-top: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container-fluid {
+  .region {
+    max-width: 1480px;
+    overflow: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+// Row flex.
+.view-skuhan-portfolio-stripe {
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+// Preloader
+.preloader {
+  background: #fff;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  text-align: center;
+  .preloader-bounce {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    .pl-child {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #e52225;
+      opacity: .9;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-animation: pl-doubleBounce 2s infinite ease-in-out;
+      animation: pl-doubleBounce 2s infinite ease-in-out;
+      &.pl-double-bounce2 {
+        -webkit-animation-delay: -1s;
+        animation-delay: -1s;
+      }
+    }
+  }
+}
+
+// One page presentation fixes.
+.page-node-type-skuhan-one-page {
+  .skuhan-one-page-page {
+    padding: 0;
+  }
+  // Container fluid.
+  .container-fluid {
+    .region {
+      max-width: 100%; 
+    }
+  }
+}
+
+// Container big.
+.container-big {
+  max-width: 1210px;
+}
+
+/*Bootstrap no gutters*/
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  & > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/*Header*/
+header {
+  &.navbar-default {
+    border: 0px;
+    background-color: transparent;
+    border-radius: 0;
+    //position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    z-index: 99;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.13);
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+/*Back to top*/
+.back-top {
+	background:	#0f0f0f;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: fixed;
+	right: 25px;
+	bottom: 80px;
+	font-size: 30px;
+	display: none;
+	z-index: 10;
+	border: 2px solid #fff;
+	display: none;
+	&:hover {
+  	background: #e52225;	
+  }
+  i {
+  	position: absolute;
+  	left: 14px;
+  	top: 5px;	
+  	color: #fff;
+  }
+}
+
+/*Footer*/
+footer.footer {
+  padding: 30px 0;
+  margin-top: 0;
+  border-top: 0;
+  .field--name-body {
+    overflow: auto;
+    max-width: 1480px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    .skuhan-logo {
+      a {
+        font-family: $alter-font-stack;
+        color: $c-font-black;
+        font-size: 2em;
+        text-decoration: none;
+        .first-letter {
+          color: $c-font-red;
+        } 
+      }
+    }
+    .text-center {
+      p {
+        margin-bottom: 0;
+        position: relative;
+        top: 12px;
+      }
+    }
+    .social-links {
+      margin: 0 0 0 auto;
+      padding: 0;
+      list-style: none;
+      li {
+        margin: 0 5px;
+        a {
+          color: #1c1c1c;
+          border: 2px solid;
+          font-size: 20px;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          float: left;		
+          padding-left: 1px;
+          -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+          i {
+            position: relative;
+            top: -3px;
+            left: 3px;
+          }
+          &:hover {
+            background: #1c1c1c;
+            color: #fff;
+            border-color: #1c1c1c;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Margin classes*/
+.mt-70 {
+  margin-top: 70px;
+}
+.mt-130 {
+  margin-top: 130px;
+}

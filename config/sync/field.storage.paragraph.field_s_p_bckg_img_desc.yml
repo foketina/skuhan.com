@@ -1,0 +1,19 @@
+uuid: fddbffd0-93ba-4b74-9512-ec7af9711902
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_s_p_bckg_img_desc
+field_name: field_s_p_bckg_img_desc
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

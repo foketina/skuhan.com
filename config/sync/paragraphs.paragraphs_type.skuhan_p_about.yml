@@ -1,0 +1,9 @@
+uuid: 88c5d280-1880-485a-84f5-5609e5aca689
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_about
+label: 'About me'
+icon_uuid: null
+description: 'About me paragrapahs for One page presentation content type'
+behavior_plugins: {  }

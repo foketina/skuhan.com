@@ -1,0 +1,23 @@
+uuid: c9822301-72a6-44d0-ba45-b0a8fbc40d3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.skuhan_portfolio
+  module:
+    - text
+id: node.skuhan_portfolio.body
+field_name: body
+entity_type: node
+bundle: skuhan_portfolio
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

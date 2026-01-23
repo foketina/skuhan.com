@@ -1,0 +1,34 @@
+/*Navbar*/
+body.toolbar-horizontal.toolbar-fixed {
+  header.navbar {
+    top: 80px;
+  }
+}
+header.navbar {
+  min-height: inherit;
+  padding: 15px 0;
+  position: fixed;
+  .skuhan-header-container{
+    max-width: 1920px;
+    margin: 0 auto;
+    .navbar-header {
+      .region.region-navigation {
+        display: inline-block;
+        // Skuhan Logo.
+        .skuhan-logo {
+          .skuhan-logo-inner-block {
+            a {
+              font-family: $alter-font-stack;
+              color: $c-font-black;
+              font-size: 2em;
+              text-decoration: none;
+              .first-letter {
+                color: $c-font-red;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

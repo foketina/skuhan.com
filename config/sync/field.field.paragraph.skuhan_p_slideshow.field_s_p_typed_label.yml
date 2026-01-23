@@ -1,0 +1,19 @@
+uuid: 4fdefb82-af11-4b79-8741-a9641ea6a625
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_typed_label
+    - paragraphs.paragraphs_type.skuhan_p_slideshow
+id: paragraph.skuhan_p_slideshow.field_s_p_typed_label
+field_name: field_s_p_typed_label
+entity_type: paragraph
+bundle: skuhan_p_slideshow
+label: 'Typed label'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

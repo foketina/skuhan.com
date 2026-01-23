@@ -1,0 +1,51 @@
+uuid: 5441ad9e-d096-40a8-9116-9ff0029026d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_experience.field_s_p_experience_company
+    - field.field.paragraph.skuhan_p_experience.field_s_p_experience_date
+    - field.field.paragraph.skuhan_p_experience.field_s_p_experience_desc
+    - field.field.paragraph.skuhan_p_experience.field_s_p_experience_title
+    - paragraphs.paragraphs_type.skuhan_p_experience
+  module:
+    - datetime_range
+id: paragraph.skuhan_p_experience.default
+targetEntityType: paragraph
+bundle: skuhan_p_experience
+mode: default
+content:
+  field_s_p_experience_company:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_s_p_experience_date:
+    type: daterange_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_year
+      separator: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_s_p_experience_desc:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_s_p_experience_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

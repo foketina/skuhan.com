@@ -1,0 +1,9 @@
+uuid: ead2bce3-5c84-4d53-b795-33ca8eec732f
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_experience
+label: 'Experience Content'
+icon_uuid: null
+description: 'Experience content items for experience container paragraph type'
+behavior_plugins: {  }

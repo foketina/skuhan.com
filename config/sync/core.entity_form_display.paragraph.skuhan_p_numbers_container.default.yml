@@ -1,0 +1,40 @@
+uuid: dde0d9ca-f6d0-41f5-b3ae-1e4bfb3e8030
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_numbers_container.field_skuhan_p_nc_img
+    - field.field.paragraph.skuhan_p_numbers_container.field_skuhan_p_nc_numbers
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.skuhan_p_numbers_container
+  module:
+    - image
+    - paragraphs
+id: paragraph.skuhan_p_numbers_container.default
+targetEntityType: paragraph
+bundle: skuhan_p_numbers_container
+mode: default
+content:
+  field_skuhan_p_nc_img:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_skuhan_p_nc_numbers:
+    type: entity_reference_paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

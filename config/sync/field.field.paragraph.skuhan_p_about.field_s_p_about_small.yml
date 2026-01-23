@@ -1,0 +1,19 @@
+uuid: ebb23ea8-2d46-4a0b-a044-71010eacf4e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_about_small
+    - paragraphs.paragraphs_type.skuhan_p_about
+id: paragraph.skuhan_p_about.field_s_p_about_small
+field_name: field_s_p_about_small
+entity_type: paragraph
+bundle: skuhan_p_about
+label: 'Small title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

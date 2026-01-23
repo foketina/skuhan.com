@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: r8uAx4mTBwCkgDFbdKCmhjgbb91BQ4HbWSYRKrlowMY
+load_all_enabled_fonts: 1
+enabled_fonts:
+  - 'https://www.google.com/webfonts/family?family=Poppins&subset=latin-ext#500'
+  - 'https://www.google.com/webfonts/family?family=Poppins&subset=latin-ext#600'
+  - 'https://www.google.com/webfonts/family?family=Poppins&subset=latin-ext#700'
+  - 'https://www.google.com/webfonts/family?family=Staatliches&subset=latin-ext#regular'
+  - 'https://www.google.com/webfonts/family?family=Poppins&subset=latin-ext#300'

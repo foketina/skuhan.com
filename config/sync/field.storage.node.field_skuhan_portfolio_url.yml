@@ -1,0 +1,19 @@
+uuid: 39c2c6ec-b822-48bf-a855-0aef88f3b70a
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_skuhan_portfolio_url
+field_name: field_skuhan_portfolio_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

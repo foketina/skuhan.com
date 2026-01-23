@@ -1,0 +1,14 @@
+uuid: 6cba4a1a-9c15-42c2-91d2-a92ee39eeafb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  title: '[current-page:title] | [site:name]'
+  description: 'Personal portfolio of Jasmin Skuhan, Senior drupal developer, Application Architect'
+  canonical_url: '[current-page:url]'
+  keywords: 'drupal developer, web application development, php, drupal, theming, custom module development'
+  robots: 'index, follow'

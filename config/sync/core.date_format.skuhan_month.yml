@@ -1,0 +1,8 @@
+uuid: f61c7259-e7dd-4368-bf13-3930993c44ee
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_month
+label: 'Skuhan Month'
+locked: false
+pattern: M

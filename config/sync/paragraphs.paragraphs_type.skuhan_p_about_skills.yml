@@ -1,0 +1,9 @@
+uuid: 226909e1-6280-451e-9e34-5ad1b9b06655
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_about_skills
+label: Skills
+icon_uuid: null
+description: 'Skills paragraph for About paragraph entity'
+behavior_plugins: {  }

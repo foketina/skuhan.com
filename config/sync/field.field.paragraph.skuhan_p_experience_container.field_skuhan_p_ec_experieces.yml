@@ -1,0 +1,58 @@
+uuid: b7b61306-99ae-42a5-be2d-004d49e3932e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_skuhan_p_ec_experieces
+    - paragraphs.paragraphs_type.skuhan_p_experience
+    - paragraphs.paragraphs_type.skuhan_p_experience_container
+  module:
+    - entity_reference_revisions
+id: paragraph.skuhan_p_experience_container.field_skuhan_p_ec_experieces
+field_name: field_skuhan_p_ec_experieces
+entity_type: paragraph
+bundle: skuhan_p_experience_container
+label: Experiences
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      skuhan_p_experience: skuhan_p_experience
+    negate: 0
+    target_bundles_drag_drop:
+      skuhan_p_about:
+        weight: 11
+        enabled: false
+      skuhan_p_about_skills:
+        weight: 12
+        enabled: false
+      skuhan_p_experience:
+        weight: 13
+        enabled: true
+      skuhan_p_experience_container:
+        weight: 14
+        enabled: false
+      skuhan_p_numbers:
+        weight: 15
+        enabled: false
+      skuhan_p_numbers_container:
+        weight: 16
+        enabled: false
+      skuhan_p_portfolio:
+        weight: 17
+        enabled: false
+      skuhan_p_services:
+        weight: 18
+        enabled: false
+      skuhan_p_services_container:
+        weight: 19
+        enabled: false
+      skuhan_p_slideshow:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

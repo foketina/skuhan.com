@@ -1,0 +1,21 @@
+uuid: 4c422ec6-4d79-4b24-8f69-bcb3c572585d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_s_p_experience_title
+field_name: field_s_p_experience_title
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

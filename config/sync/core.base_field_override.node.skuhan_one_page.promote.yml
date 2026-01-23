@@ -1,0 +1,22 @@
+uuid: 1aa87a1f-f80a-4c6b-b1e4-071a2ab37bf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.skuhan_one_page
+id: node.skuhan_one_page.promote
+field_name: promote
+entity_type: node
+bundle: skuhan_one_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

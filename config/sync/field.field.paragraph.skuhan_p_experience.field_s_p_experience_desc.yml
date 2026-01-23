@@ -1,0 +1,19 @@
+uuid: 0f6f8c58-29cb-4a99-99f6-caa123ccbf04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_experience_desc
+    - paragraphs.paragraphs_type.skuhan_p_experience
+id: paragraph.skuhan_p_experience.field_s_p_experience_desc
+field_name: field_s_p_experience_desc
+entity_type: paragraph
+bundle: skuhan_p_experience
+label: 'Short job description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

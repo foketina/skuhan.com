@@ -1,0 +1,8 @@
+uuid: 6b1b1c5f-c6b5-4b34-8afc-c077d1f38a3a
+langcode: en
+status: true
+dependencies: {  }
+name: Skills
+vid: skuhan_skills
+description: 'Skills for portfolio'
+weight: 0

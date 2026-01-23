@@ -1,0 +1,22 @@
+uuid: 44be579c-2eed-4ace-b093-83aaa5c410d0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - skuhan
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: skuhan_local_tasks
+theme: skuhan
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

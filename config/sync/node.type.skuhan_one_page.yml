@@ -1,0 +1,17 @@
+uuid: 14dcc313-9119-47e1-a743-24b84f752587
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'One Page Presentation'
+type: skuhan_one_page
+description: 'One page presentation for skuhan.com'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

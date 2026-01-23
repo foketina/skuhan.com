@@ -1,0 +1,23 @@
+uuid: 11b8f10e-ce7c-410d-838c-35cdb362096b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_numbers_numb
+    - paragraphs.paragraphs_type.skuhan_p_numbers
+id: paragraph.skuhan_p_numbers.field_s_p_numbers_numb
+field_name: field_s_p_numbers_numb
+entity_type: paragraph
+bundle: skuhan_p_numbers
+label: Number
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

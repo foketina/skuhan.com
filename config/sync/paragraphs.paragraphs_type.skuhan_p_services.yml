@@ -1,0 +1,9 @@
+uuid: ee016657-43d5-4263-8708-a4894a17246d
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_services
+label: 'Services Content'
+icon_uuid: null
+description: 'Services paragraph for one page presentation at skuhan.com'
+behavior_plugins: {  }

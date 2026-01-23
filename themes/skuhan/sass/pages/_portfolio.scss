@@ -1,0 +1,56 @@
+/*Portfolio Nodes*/
+article.skuhan-portfolio {
+  .content.node-content-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 80px 0;
+    .field--name-body {
+      margin-bottom: 30px;
+    }
+    .project-details {
+      padding-top: 20px;
+      .field {
+        border-bottom: 1px solid #ddd;
+        height: 100%;
+        padding: 20px 0;
+        .field--label {
+          color: #0f0f0f;
+          font-weight: 600;
+          line-height: 1;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+          display: block;
+        }
+        &.field--type-entity-reference {
+          .field--item {
+            display: inline-block;
+            padding: 5px 0;
+            a {
+              display: inline-block;
+              margin-right: 5px;
+              color: #707070;
+              border: 1px solid;
+              border-radius: 5px;
+              font-size: 12px;
+              padding: 1px 9px 0;
+              line-height: 26px;
+              text-decoration: none;
+              &:hover {
+                color: #0f0f0f;
+              }
+            }
+          }
+        }
+        &.field--name-field-skuhan-portfolio-url {
+          a {
+            color: #e52225;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

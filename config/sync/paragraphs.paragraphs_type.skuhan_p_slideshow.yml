@@ -1,0 +1,9 @@
+uuid: fb0a1ed5-70ff-46cb-95ba-36ade41f2b7e
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_slideshow
+label: Slideshow
+icon_uuid: null
+description: 'Slideshow paragraph for One page presentation content type'
+behavior_plugins: {  }

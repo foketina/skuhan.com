@@ -1,0 +1,19 @@
+uuid: fe22dc6e-43bd-48b2-9680-3104d8091a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_about_big
+    - paragraphs.paragraphs_type.skuhan_p_about
+id: paragraph.skuhan_p_about.field_s_p_about_big
+field_name: field_s_p_about_big
+entity_type: paragraph
+bundle: skuhan_p_about
+label: 'Big title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,93 @@
+uuid: 94414bca-49ca-4c87-8365-d1139bfa6207
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_slideshow.field_s_p_big_title_1
+    - field.field.paragraph.skuhan_p_slideshow.field_s_p_big_title_2
+    - field.field.paragraph.skuhan_p_slideshow.field_s_p_slide_desc
+    - field.field.paragraph.skuhan_p_slideshow.field_s_p_typed_label
+    - paragraphs.paragraphs_type.skuhan_p_slideshow
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_html1:
+      children:
+        - field_s_p_big_title_1
+        - field_s_p_big_title_2
+      label: 'Big title'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Big title'
+        classes: ''
+        id: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+    group_html2:
+      children:
+        - field_s_p_typed_label
+        - field_s_p_typed_content
+      label: 'Typed content '
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+id: paragraph.skuhan_p_slideshow.default
+targetEntityType: paragraph
+bundle: skuhan_p_slideshow
+mode: default
+content:
+  field_s_p_big_title_1:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_s_p_big_title_2:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_s_p_slide_desc:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_s_p_typed_label:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,25 @@
+uuid: 34919eb3-a422-45c2-a102-53005df576c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.skuhan_webform_blocks
+    - field.storage.block_content.field_s_blocks_ref_webform
+  module:
+    - webform
+id: block_content.skuhan_webform_blocks.field_s_blocks_ref_webform
+field_name: field_s_blocks_ref_webform
+entity_type: block_content
+bundle: skuhan_webform_blocks
+label: Webform
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

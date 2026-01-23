@@ -1,0 +1,24 @@
+uuid: a99e636b-2ee9-4fc1-8406-110cdc0d2e09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_portfolio.field_s_p_portfolio_view
+    - paragraphs.paragraphs_type.skuhan_p_portfolio
+  module:
+    - viewsreference
+id: paragraph.skuhan_p_portfolio.default
+targetEntityType: paragraph
+bundle: skuhan_p_portfolio
+mode: default
+content:
+  field_s_p_portfolio_view:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

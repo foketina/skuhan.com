@@ -1,0 +1,15 @@
+uuid: e0cf292b-7e03-4db9-8f2e-6267ce1f3077
+langcode: en
+status: true
+dependencies: {  }
+name: blogs_460x280
+label: 'Blogs (460x280)'
+effects:
+  9a47b05a-92cb-4afd-8ede-3dfce9e43833:
+    uuid: 9a47b05a-92cb-4afd-8ede-3dfce9e43833
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 460
+      height: 280
+      anchor: center-center

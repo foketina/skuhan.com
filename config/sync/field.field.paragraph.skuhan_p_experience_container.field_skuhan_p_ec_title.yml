@@ -1,0 +1,19 @@
+uuid: db105c75-0333-4bc8-b3b6-8be587a762e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_skuhan_p_ec_title
+    - paragraphs.paragraphs_type.skuhan_p_experience_container
+id: paragraph.skuhan_p_experience_container.field_skuhan_p_ec_title
+field_name: field_skuhan_p_ec_title
+entity_type: paragraph
+bundle: skuhan_p_experience_container
+label: 'Stripe title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

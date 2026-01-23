@@ -1,0 +1,18 @@
+uuid: 9ed909c2-8c49-4bfa-b6bd-e1208bb918e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_s_p_numbers_numb
+field_name: field_s_p_numbers_numb
+entity_type: paragraph
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

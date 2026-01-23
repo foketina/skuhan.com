@@ -1,0 +1,7 @@
+uuid: 9ab351ef-e857-4753-af75-27b54783e723
+langcode: en
+status: false
+dependencies: {  }
+formId: node_skuhan_blogs_form
+captchaType: default
+label: null

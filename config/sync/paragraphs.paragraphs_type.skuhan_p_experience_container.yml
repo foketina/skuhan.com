@@ -1,0 +1,9 @@
+uuid: fee52061-237a-496e-9fc4-6c624227c3f9
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_experience_container
+label: Experience
+icon_uuid: null
+description: 'Experience container paragraph for one-page presentation content type stripes'
+behavior_plugins: {  }

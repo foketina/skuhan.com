@@ -1,0 +1,30 @@
+uuid: 0a107294-007e-4c5d-bd79-c5b45c7e63cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.skuhan_webform_blocks
+    - field.field.block_content.skuhan_webform_blocks.field_s_blocks_ref_webform
+  module:
+    - webform
+id: block_content.skuhan_webform_blocks.default
+targetEntityType: block_content
+bundle: skuhan_webform_blocks
+mode: default
+content:
+  field_s_blocks_ref_webform:
+    type: webform_entity_reference_select
+    weight: 27
+    region: content
+    settings:
+      default_data: true
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

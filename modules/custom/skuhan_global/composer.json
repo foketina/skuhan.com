@@ -1,0 +1,13 @@
+{
+    "name": "skuhan_global",
+    "type": "drupal-module",
+    "description": "Skuhan.com Global module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/skuhan_global",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/skuhan_global",
+        "source": "http://cgit.drupalcode.org/skuhan_global"
+    }
+}

@@ -1,0 +1,9 @@
+uuid: 96dfd6b3-4e05-4119-b579-596940cd46bb
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_numbers
+label: 'Numbers Content'
+icon_uuid: null
+description: 'Numbers items for numbers container on one page presentation content type.'
+behavior_plugins: {  }

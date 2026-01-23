@@ -1,0 +1,26 @@
+uuid: c5e69158-068c-4c15-bd2d-c04d4067dc8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_experience_date
+    - paragraphs.paragraphs_type.skuhan_p_experience
+  module:
+    - datetime_range
+id: paragraph.skuhan_p_experience.field_s_p_experience_date
+field_name: field_s_p_experience_date
+entity_type: paragraph
+bundle: skuhan_p_experience
+label: Dates
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
+default_value_callback: ''
+settings: {  }
+field_type: daterange

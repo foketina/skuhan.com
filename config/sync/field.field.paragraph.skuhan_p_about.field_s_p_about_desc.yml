@@ -1,0 +1,19 @@
+uuid: 9c26ba3f-d1d1-49fe-822b-94bf1afc5de2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_about_desc
+    - paragraphs.paragraphs_type.skuhan_p_about
+id: paragraph.skuhan_p_about.field_s_p_about_desc
+field_name: field_s_p_about_desc
+entity_type: paragraph
+bundle: skuhan_p_about
+label: 'Short description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

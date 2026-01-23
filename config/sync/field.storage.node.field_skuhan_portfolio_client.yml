@@ -1,0 +1,21 @@
+uuid: cc364f9a-3176-4d23-bcd2-212e354c47f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_skuhan_portfolio_client
+field_name: field_skuhan_portfolio_client
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

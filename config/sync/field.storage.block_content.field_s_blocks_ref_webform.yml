@@ -1,0 +1,20 @@
+uuid: c602237a-5981-4fee-8efc-579f6fe94f4f
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - webform
+id: block_content.field_s_blocks_ref_webform
+field_name: field_s_blocks_ref_webform
+entity_type: block_content
+type: webform
+settings:
+  target_type: webform
+module: webform
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

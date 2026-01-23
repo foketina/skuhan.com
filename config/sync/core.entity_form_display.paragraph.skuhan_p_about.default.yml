@@ -1,0 +1,56 @@
+uuid: 18eab95e-f194-479a-848b-fa90e837ae30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_about.field_s_p_about_big
+    - field.field.paragraph.skuhan_p_about.field_s_p_about_desc
+    - field.field.paragraph.skuhan_p_about.field_s_p_about_small
+    - field.field.paragraph.skuhan_p_about.field_s_p_skills_p
+    - paragraphs.paragraphs_type.skuhan_p_about
+  module:
+    - paragraphs
+id: paragraph.skuhan_p_about.default
+targetEntityType: paragraph
+bundle: skuhan_p_about
+mode: default
+content:
+  field_s_p_about_big:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_s_p_about_desc:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_s_p_about_small:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_s_p_skills_p:
+    type: entity_reference_paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,45 @@
+// Skuhan Main Navigation.
+header#navbar {
+  #navbar-collapse {
+    width: inherit;
+    float: right;
+    .skuhan-main-menu {
+      ul.menu--skuhan-main-menu {
+        text-align: right;
+        li {
+          display: inline-block;
+          a {
+            display: inline-block;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+            font-weight: 300;
+            color: $c-font-black;
+            span {
+    	         &:after {
+                content: '';	
+              	background: #222;
+              	right: 0;
+              	position: absolute;
+              	height: 2px;
+              	margin: 5px auto 0;
+              	width: 0;
+              	bottom: 0;
+              	-webkit-transition: all 0.4s ease;
+                transition: all 0.4s ease;
+    	         }
+    	       }
+    	       &:hover {
+              text-decoration: none;
+              background: none;
+              span:after {
+              	width: 100%;
+              	left: 0;
+              	right: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

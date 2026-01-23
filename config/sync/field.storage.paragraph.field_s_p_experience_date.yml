@@ -1,0 +1,20 @@
+uuid: 6de3f6b0-a2d4-4c37-a8a7-38d66cd06b99
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - paragraphs
+id: paragraph.field_s_p_experience_date
+field_name: field_s_p_experience_date
+entity_type: paragraph
+type: daterange
+settings:
+  datetime_type: date
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

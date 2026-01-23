@@ -1,0 +1,47 @@
+uuid: c644fe19-8633-45d1-a072-d5b41fdb5336
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:skuhan_webform_blocks:61260363-9a24-47bd-9fe8-2f85ed1ea635'
+  module:
+    - block_content
+    - system
+label: Homepage
+name: skuhan_homepage
+group: skuhan_com
+description: 'Skuhan Homepage Context'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: b540f8bf-a4b7-4dfe-90cc-e829fa2ba9da
+    context_mapping: {  }
+    pages: '<front>'
+reactions:
+  blocks:
+    id: blocks
+    uuid: 358157fe-ec2b-4797-b7d9-0f0c817da528
+    blocks:
+      512ab504-157f-4f37-ad0f-1122df969e96:
+        uuid: 512ab504-157f-4f37-ad0f-1122df969e96
+        id: 'block_content:61260363-9a24-47bd-9fe8-2f85ed1ea635'
+        label: 'Get In Touch'
+        provider: block_content
+        label_display: visible
+        region: content
+        weight: '1'
+        custom_id: block_content_61260363_9a24_47bd_9fe8_2f85ed1ea635
+        theme: skuhan
+        css_class: ''
+        unique: 0
+        context_id: skuhan_homepage
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+    include_default_blocks: 0
+    saved: false
+weight: 0

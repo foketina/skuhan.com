@@ -1,0 +1,48 @@
+uuid: 1c37e42e-90ec-4203-a4c2-234d35c6c71e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.skuhan_blogs.body
+    - field.field.node.skuhan_blogs.field_s_b_image
+    - field.field.node.skuhan_blogs.field_s_b_tags
+    - node.type.skuhan_blogs
+  module:
+    - image
+    - text
+    - user
+id: node.skuhan_blogs.default
+targetEntityType: node
+bundle: skuhan_blogs
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_s_b_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_s_b_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

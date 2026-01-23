@@ -1,0 +1,27 @@
+uuid: 8bba8922-b5d7-40ac-b775-409951033294
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_portfolio.field_s_p_portfolio_view
+    - paragraphs.paragraphs_type.skuhan_p_portfolio
+  module:
+    - viewsreference
+id: paragraph.skuhan_p_portfolio.default
+targetEntityType: paragraph
+bundle: skuhan_p_portfolio
+mode: default
+content:
+  field_s_p_portfolio_view:
+    type: viewsreference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

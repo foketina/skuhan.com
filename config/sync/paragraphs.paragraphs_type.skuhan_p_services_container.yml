@@ -1,0 +1,9 @@
+uuid: f672989f-d371-4d54-a16c-4e2471657f59
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_services_container
+label: Services
+icon_uuid: null
+description: 'Services container for services paragraph.'
+behavior_plugins: {  }

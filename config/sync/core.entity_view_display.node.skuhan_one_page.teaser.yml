@@ -1,0 +1,22 @@
+uuid: 7a24011a-2291-4fe9-b80d-4b3d7d8fd631
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.skuhan_one_page.field_s_op_stripes
+    - node.type.skuhan_one_page
+  module:
+    - user
+id: node.skuhan_one_page.teaser
+targetEntityType: node
+bundle: skuhan_one_page
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_s_op_stripes: true

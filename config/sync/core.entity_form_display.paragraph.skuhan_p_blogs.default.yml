@@ -1,0 +1,27 @@
+uuid: b4055284-a91c-4b30-aaa3-00bfdbcb7f2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_blogs.field_s_p_blogs
+    - paragraphs.paragraphs_type.skuhan_p_blogs
+  module:
+    - viewsreference
+id: paragraph.skuhan_p_blogs.default
+targetEntityType: paragraph
+bundle: skuhan_p_blogs
+mode: default
+content:
+  field_s_p_blogs:
+    type: viewsreference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

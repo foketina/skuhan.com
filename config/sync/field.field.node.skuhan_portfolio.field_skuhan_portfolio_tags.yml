@@ -1,0 +1,29 @@
+uuid: b5e1de8e-bd4d-401b-af7b-78456b87553e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skuhan_portfolio_tags
+    - node.type.skuhan_portfolio
+    - taxonomy.vocabulary.tags
+id: node.skuhan_portfolio.field_skuhan_portfolio_tags
+field_name: field_skuhan_portfolio_tags
+entity_type: node
+bundle: skuhan_portfolio
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

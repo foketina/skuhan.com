@@ -1,0 +1,37 @@
+uuid: 6df5f633-324d-4df6-b1f9-8854cb0189a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_skills_p
+    - paragraphs.paragraphs_type.skuhan_p_about
+    - paragraphs.paragraphs_type.skuhan_p_about_skills
+  module:
+    - entity_reference_revisions
+id: paragraph.skuhan_p_about.field_s_p_skills_p
+field_name: field_s_p_skills_p
+entity_type: paragraph
+bundle: skuhan_p_about
+label: Skills
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      skuhan_p_about_skills: skuhan_p_about_skills
+    negate: 0
+    target_bundles_drag_drop:
+      skuhan_p_about:
+        weight: 4
+        enabled: false
+      skuhan_p_about_skills:
+        weight: 5
+        enabled: true
+      skuhan_p_slideshow:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,31 @@
+uuid: 3157c25e-3c91-4f14-a86c-cb18a0c34fce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_numbers.field_s_p_numbers_label
+    - field.field.paragraph.skuhan_p_numbers.field_s_p_numbers_numb
+    - paragraphs.paragraphs_type.skuhan_p_numbers
+id: paragraph.skuhan_p_numbers.default
+targetEntityType: paragraph
+bundle: skuhan_p_numbers
+mode: default
+content:
+  field_s_p_numbers_label:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_s_p_numbers_numb:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

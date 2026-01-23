@@ -1,0 +1,91 @@
+uuid: c5a79bb3-8a9f-4f5f-802c-9ef7667f3021
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.skuhan_portfolio.body
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_client
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_date
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_img
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_skills
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_tags
+    - field.field.node.skuhan_portfolio.field_skuhan_portfolio_url
+    - node.type.skuhan_portfolio
+  module:
+    - datetime
+    - image
+    - link
+    - text
+    - user
+id: node.skuhan_portfolio.default
+targetEntityType: node
+bundle: skuhan_portfolio
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_skuhan_portfolio_client:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_skuhan_portfolio_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: month_year
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_skuhan_portfolio_img:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_skuhan_portfolio_skills:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_skuhan_portfolio_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_skuhan_portfolio_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 4a9574a4-a9a1-4013-8b93-1f50689f3a27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_skills_procent
+    - paragraphs.paragraphs_type.skuhan_p_about_skills
+id: paragraph.skuhan_p_about_skills.field_s_p_skills_procent
+field_name: field_s_p_skills_procent
+entity_type: paragraph
+bundle: skuhan_p_about_skills
+label: 'Skill procentage'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

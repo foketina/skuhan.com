@@ -1,0 +1,38 @@
+uuid: a1b8a6f6-62df-42d3-8df9-c1ad2f08aba2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_services.field_s_p_services_desc
+    - field.field.paragraph.skuhan_p_services.field_s_p_services_icon
+    - field.field.paragraph.skuhan_p_services.field_s_p_services_title
+    - paragraphs.paragraphs_type.skuhan_p_services
+id: paragraph.skuhan_p_services.default
+targetEntityType: paragraph
+bundle: skuhan_p_services
+mode: default
+content:
+  field_s_p_services_desc:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_s_p_services_icon:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_s_p_services_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: c0bf1610-c812-4d0d-9aae-2e0e14f54f0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: blogs
+label: Blogs
+type: 'canonical_entities:node'
+pattern: 'blogs/[node:title]'
+selection_criteria:
+  bf88503c-f8db-449f-b782-11a9be8c6a1f:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: bf88503c-f8db-449f-b782-11a9be8c6a1f
+    context_mapping:
+      node: node
+    bundles:
+      skuhan_blogs: skuhan_blogs
+selection_logic: and
+weight: -5
+relationships: {  }

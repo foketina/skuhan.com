@@ -1,0 +1,19 @@
+uuid: 29ae086d-0c20-4612-8806-d310d7dbcd87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skuhan_portfolio_client
+    - node.type.skuhan_portfolio
+id: node.skuhan_portfolio.field_skuhan_portfolio_client
+field_name: field_skuhan_portfolio_client
+entity_type: node
+bundle: skuhan_portfolio
+label: Client
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

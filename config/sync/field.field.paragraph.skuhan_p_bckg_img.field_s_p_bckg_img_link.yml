@@ -1,0 +1,23 @@
+uuid: db2752e0-f121-4b97-bada-1b243b4f4015
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_bckg_img_link
+    - paragraphs.paragraphs_type.skuhan_p_bckg_img
+  module:
+    - link
+id: paragraph.skuhan_p_bckg_img.field_s_p_bckg_img_link
+field_name: field_s_p_bckg_img_link
+entity_type: paragraph
+bundle: skuhan_p_bckg_img
+label: 'Button link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

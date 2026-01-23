@@ -1,0 +1,50 @@
+uuid: ca0c6151-27eb-4a63-936b-753b640ab017
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skuhan_p_about.field_s_p_about_big
+    - field.field.paragraph.skuhan_p_about.field_s_p_about_desc
+    - field.field.paragraph.skuhan_p_about.field_s_p_about_small
+    - field.field.paragraph.skuhan_p_about.field_s_p_skills_p
+    - paragraphs.paragraphs_type.skuhan_p_about
+  module:
+    - entity_reference_revisions
+id: paragraph.skuhan_p_about.default
+targetEntityType: paragraph
+bundle: skuhan_p_about
+mode: default
+content:
+  field_s_p_about_big:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_s_p_about_desc:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_s_p_about_small:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_s_p_skills_p:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

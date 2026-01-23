@@ -1,0 +1,9 @@
+uuid: 209d92e5-3893-4ce6-9195-a83765fe1d98
+langcode: en
+status: true
+dependencies: {  }
+id: skuhan_p_portfolio
+label: Portfolio
+icon_uuid: null
+description: 'Portfolio paragraph for one page presentation content type on skuhan.com'
+behavior_plugins: {  }

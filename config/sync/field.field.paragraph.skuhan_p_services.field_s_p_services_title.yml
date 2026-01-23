@@ -1,0 +1,19 @@
+uuid: 6c8350ee-e5eb-42f3-974f-a34cf09e5ec6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_s_p_services_title
+    - paragraphs.paragraphs_type.skuhan_p_services
+id: paragraph.skuhan_p_services.field_s_p_services_title
+field_name: field_s_p_services_title
+entity_type: paragraph
+bundle: skuhan_p_services
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

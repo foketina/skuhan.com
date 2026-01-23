@@ -1,0 +1,23 @@
+uuid: 98a9bfd9-4500-44ca-9116-a3f593e9d605
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.skuhan_webform_blocks
+    - field.field.block_content.skuhan_webform_blocks.field_s_blocks_ref_webform
+  module:
+    - webform
+id: block_content.skuhan_webform_blocks.default
+targetEntityType: block_content
+bundle: skuhan_webform_blocks
+mode: default
+content:
+  field_s_blocks_ref_webform:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

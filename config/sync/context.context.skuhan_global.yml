@@ -1,0 +1,84 @@
+uuid: dd2984d6-9e95-4828-9a43-68bee89f70be
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.skuhan-main-menu
+  content:
+    - 'block_content:basic:8acfcb6f-23c2-4587-b7dd-43b32066f445'
+    - 'block_content:basic:f9160cba-8b8c-47e2-abb9-bf6144b5b45c'
+  module:
+    - block_content
+    - system
+label: Global
+name: skuhan_global
+group: skuhan_com
+description: 'Skuhan Global Context'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 9433cec1-9d8d-44cc-807f-ba8c0c029a43
+    context_mapping: {  }
+    pages: '*'
+reactions:
+  blocks:
+    id: blocks
+    uuid: e64e508d-e8f8-435b-afa7-0220a5342375
+    blocks:
+      26bc8239-096a-4845-92fa-700dd9d82963:
+        uuid: 26bc8239-096a-4845-92fa-700dd9d82963
+        id: 'block_content:f9160cba-8b8c-47e2-abb9-bf6144b5b45c'
+        label: 'skuhan.com Logo'
+        provider: block_content
+        label_display: '0'
+        region: navigation
+        weight: '-1'
+        custom_id: block_content_f9160cba_8b8c_47e2_abb9_bf6144b5b45c
+        theme: skuhan
+        css_class: skuhan-logo
+        unique: 0
+        context_id: skuhan_global
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+      dd8cdd27-dc1d-430a-a0e0-1722f42f3c2f:
+        uuid: dd8cdd27-dc1d-430a-a0e0-1722f42f3c2f
+        id: 'system_menu_block:skuhan-main-menu'
+        label: 'Main Menu'
+        provider: system
+        label_display: '0'
+        region: navigation_collapsible
+        weight: '-9'
+        custom_id: system_menu_block_skuhan_main_menu
+        theme: skuhan
+        css_class: skuhan-main-menu
+        unique: 0
+        context_id: skuhan_global
+        context_mapping: {  }
+        level: '1'
+        depth: '0'
+        expand_all_items: 0
+      dddbd6d7-8ea8-434e-bc26-4c1e3d3e5356:
+        uuid: dddbd6d7-8ea8-434e-bc26-4c1e3d3e5356
+        id: 'block_content:8acfcb6f-23c2-4587-b7dd-43b32066f445'
+        label: 'Skuhan Footer'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_8acfcb6f_23c2_4587_b7dd_43b32066f445
+        theme: skuhan
+        css_class: ''
+        unique: 0
+        context_id: skuhan_global
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+    include_default_blocks: 0
+    saved: false
+weight: 0

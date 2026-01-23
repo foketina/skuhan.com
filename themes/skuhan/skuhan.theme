@@ -1,0 +1,211 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+use Drupal\image\Entity\ImageStyle;
+use Drupal\block_content\Entity\BlockContent;
+
+
+function skuhan_preprocess_html(&$variables) {
+  $all_attributes = \Drupal::request()->attributes;
+  $route_name = \Drupal::request()->attributes->get('_route');
+  // User login page.
+  if ($route_name == 'user.login') {
+    $variables['attributes']['class'][] = 'mt-130';
+  }
+  // All node entity
+  if ($route_name == 'entity.node.canonical') {
+    $node = \Drupal::request()->attributes->get('node');
+    // Skuhan Blog Nody Type.
+    if ($node->getType() == 'skuhan_blogs') {
+      $variables['attributes']['class'][] = 'mt-70';
+    }
+  }
+}
+
+function skuhan_preprocess_page(&$variables) {
+  // Pass info to JS is page front (for main menu behavior).
+  $variables['#attached']['drupalSettings']['skuhan']['is_front'] = $variables['is_front'];
+  $variables["#attached"]["library"][] = 'skuhan/global-scripts';
+  //kint($variables);
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK_alter().
+*/
+function skuhan_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $theme = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+  // Skuhan One Page CT Page sugestion.
+  if ($node != NULL && $node->bundle() == 'skuhan_one_page' && $theme == 'skuhan') {
+    $suggestions[] = 'page__node_skuhan_one_page';
+  }
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK_alter().
+*/
+function skuhan_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  $element = $variables['element'];
+  // Webform Get in touch.
+  if (isset($element['#webform']) && $element['#webform'] == 'get_in_touch') {
+    $col_md_6_elements = $element['#webform_id'] == 'get_in_touch--your_name' || $element['#webform_id'] == 'get_in_touch--your_email';
+    if ($col_md_6_elements) {
+      $suggestions[] = 'form_element__get_in_touch__col_md_6';
+    }
+    else {
+      $suggestions[] = 'form_element__get_in_touch__col_md_12';
+    }
+  }
+}
+
+function skuhan_preprocess_block(&$variables) {
+  // Get in touch webform block.
+  if ($variables['plugin_id'] == 'block_content:61260363-9a24-47bd-9fe8-2f85ed1ea635') {
+     $variables['attributes']['id'] = 'contact';
+  }
+}
+
+/**
+* Implements template_preprocess_paragraph().
+*/
+function skuhan_preprocess_paragraph(&$variables) {
+  $paragraph_name = $variables['paragraph']->bundle();
+  $entity = $variables['paragraph'];
+  $paragraph_id = $variables['paragraph']->id();
+  // About paragraphs, one page presentation ct.
+  if ($paragraph_name == 'skuhan_p_about_skills') {
+    $variables['data_percentage'] = $variables['elements']['field_s_p_skills_procent'][0]['#markup'];
+  }
+  // Services paragraphs, one page presentation ct.
+  if ($paragraph_name == 'skuhan_p_services') {
+    $variables['content']['field_s_p_services_icon']['markup'] = $entity->get('field_s_p_services_icon')->getValue()[0];
+    $variables['content']['field_s_p_services_title']['markup'] = $entity->get('field_s_p_services_title')->getValue()[0];
+    $variables['content']['field_s_p_services_desc']['markup'] = $entity->get('field_s_p_services_desc')->getValue()[0];
+  }
+  // Numbers container paragraphs, one page presentation ct.
+  if ($paragraph_name == 'skuhan_p_numbers_container') {
+    // Get image for background.
+    $img_uri = $entity->get('field_skuhan_p_nc_img')->entity->uri->value;
+    $file_url_generator = \Drupal::service('file_url_generator');
+    $variables['content']['field_skuhan_p_nc_img']['image_url'] = $file_url_generator->generateAbsoluteString($img_uri);
+
+    // Count numbers paragraph for bootstrap classes.
+    $num_items = $variables['content']['field_skuhan_p_nc_numbers']['#items'];
+    $counting = _skuhan_bootstrap_item_counting($num_items->count());
+  }
+  // Numbers paragraphs, one page presentation ct.
+  if ($paragraph_name == 'skuhan_p_numbers') {
+    // Create class bootstrap array based on number of items.
+    $parent_entity = $variables['paragraph']->getParentEntity();
+    $item_numbers = $parent_entity->get('field_skuhan_p_nc_numbers')->count();
+    $classes = _skuhan_bootstrap_item_counting($item_numbers);
+    $variables['bootstrap_classes'] = $classes;
+  }
+  // Experience content paragraphs, one page presentation ct.
+  if ($paragraph_name == 'skuhan_p_experience') {
+    // Get classes for animation.
+    $parent_entity = $variables['paragraph']->getParentEntity();
+    $all_paragraphs = $parent_entity->field_skuhan_p_ec_experieces->getValue();
+    foreach ($all_paragraphs as $key => $value) {
+      if($value['target_id'] == $paragraph_id) {
+        if($key&1){
+          $classes = 'fadeInLeft';
+        }
+        else{
+          $classes = 'fadeInRight';
+        }
+      }
+    }
+    $variables['position_animate_classes'] = $classes;
+  }
+  // Background image stripe, one page presentation ct.
+  if ($paragraph_name == 'skuhan_p_bckg_img') {
+    // Get image for background.
+    $img_uri = $entity->get('field_s_p_bckg_img_img')->entity->uri->value;
+    $file_url_generator = \Drupal::service('file_url_generator');
+    $variables['content']['field_s_p_bckg_img_img']['image_url'] = $file_url_generator->generateAbsoluteString($img_uri);
+  }
+}
+
+function skuhan_preprocess_field(&$variables) {
+  $element = $variables['element'];
+  // Paragraph Field field_s_p_bckg_img_link.
+  if($element['#entity_type'] == 'paragraph' && $element['#bundle'] == 'skuhan_p_bckg_img' && $variables['field_name'] == 'field_s_p_bckg_img_link') {
+    // Add class to the link field.
+    $variables['items'][0]['content']['#options']['attributes']['class'][] = 'btn';
+    $variables['items'][0]['content']['#options']['attributes']['class'][] = 'btn-skuhan-primary';
+  }
+}
+
+function skuhan_preprocess_views_view_fields(&$variables) {
+  $node = $variables['row']->_entity;
+  $view = $variables['view'];
+  // Portfolio stripe.
+  if ($view->id() == 'skuhan_portfolio_stripe') {
+    $img_uri = $node->field_skuhan_portfolio_img->entity->getFileUri();
+    $img = '<img class="jasmin" src="' . ImageStyle::load('full_hd')->buildUrl($img_uri) . '" />';
+    $render_img_field = $variables['fields']['field_skuhan_portfolio_img']->content->create($img);
+    $variables['fields']['field_skuhan_portfolio_img']->content = $render_img_field;
+    $variables['node_url'] = $node->toUrl()->toString();
+  }
+}
+
+function skuhan_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $type = $node->getType();
+  // Skuhan Portfolio CT.
+  if ($type == 'skuhan_portfolio') {
+    // Render Social Share block for print in node.twig.
+    $variables['share_social_media'] = \Drupal::service('plugin.manager.block')->createInstance('social_sharing_block')->build();
+  }
+  if ($type == 'skuhan_blogs') {
+    $creation_date = $node->getCreatedTime();
+    $variables['blog_dates']['year'] = \Drupal::service('date.formatter')->format($creation_date, 'skuhan_year');
+    $variables['blog_dates']['day'] = \Drupal::service('date.formatter')->format($creation_date, 'skuhan_day');
+    $variables['blog_dates']['month'] = \Drupal::service('date.formatter')->format($creation_date, 'skuhan_month');
+    // kint($variables);
+  }
+}
+
+function skuhan_preprocess_captcha(&$variables) {
+  $element = $variables['element'];
+  // Captcha on Get in touch webform.
+  if ($element['#webform'] == 'get_in_touch') {
+    $variables['attributes']['class'][] = 'col-md-12';
+    $variables['attributes']['class'][] = 'col-xs-12';
+    $variables['attributes']['class'][] = 'col-sm-12';
+  }
+}
+
+function skuhan_preprocess_container(&$variables) {
+  $theme = $variables['theme'];
+  $element = $variables['element'];
+  if ($theme['name'] == 'skuhan' && $element['#type'] == 'actions' && $element['#theme'] == 'webform_actions') {
+    $variables['attributes']['class'][] = 'col-md-12';
+    $variables['attributes']['class'][] = 'col-sm-12';
+  }
+}
+
+function _skuhan_bootstrap_item_counting($number) {
+  $classes = array('col-sm-12');
+  switch ($number) {
+    case 1:
+      array_push($classes, 'col-md-12');
+      break;
+    case 2:
+      array_push($classes, 'col-md-6 col-xs-12 col-sm-6');
+      break;
+    case 3:
+      array_push($classes, 'col-md-4 col-xs-12 col-sm-4');
+      break;
+    case 4:
+      array_push($classes, 'col-md-3 col-xs-12 col-sm-3');
+      break;
+  }
+  return $classes;
+}
