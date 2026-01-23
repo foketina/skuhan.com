@@ -77,6 +77,17 @@ if [ ! -f "$SETTINGS_FILE" ] || ! grep -q '\$databases\[.default.\]\[.default.\]
  */
 \$settings['container_yamls'][] = \$app_root . '/' . \$site_path . '/services.yml';
 
+/**
+ * Base URL - ensures all URLs use the correct domain
+ */
+\$base_url = 'https://skuhan.com';
+
+/**
+ * Reverse proxy settings for Coolify/Traefik
+ */
+\$settings['reverse_proxy'] = TRUE;
+\$settings['reverse_proxy_addresses'] = ['127.0.0.1', '172.16.0.0/12', '10.0.0.0/8'];
+
 EOF
 
     # Set proper permissions
