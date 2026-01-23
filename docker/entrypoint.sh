@@ -7,7 +7,7 @@ echo "==> Starting Drupal container..."
 echo "==> Waiting for database connection..."
 MAX_TRIES=30
 TRIES=0
-until mysql -h"$DB_HOST" -P"$DB_PORT" -u"$DB_USER" -p"$DB_PASSWORD" -e "SELECT 1" "$DB_NAME" > /dev/null 2>&1; do
+until mysql --skip-ssl -h"$DB_HOST" -P"$DB_PORT" -u"$DB_USER" -p"$DB_PASSWORD" -e "SELECT 1" "$DB_NAME" > /dev/null 2>&1; do
     TRIES=$((TRIES + 1))
     if [ $TRIES -ge $MAX_TRIES ]; then
         echo "Error: Could not connect to database after $MAX_TRIES attempts"
@@ -23,7 +23,7 @@ cd /var/www/html
 
 # Setup settings.php if it doesn't exist or doesn't have database config
 SETTINGS_FILE="/var/www/html/sites/default/settings.php"
-if [ ! -f "$SETTINGS_FILE" ] || ! grep -q "^\$databases\['default'\]\['default'\]" "$SETTINGS_FILE" 2>/dev/null; then
+if [ ! -f "$SETTINGS_FILE" ] || ! grep -q '\$databases\[.default.\]\[.default.\]' "$SETTINGS_FILE" 2>/dev/null; then
     echo "==> Setting up settings.php..."
 
     # Copy default settings if settings.php doesn't exist
