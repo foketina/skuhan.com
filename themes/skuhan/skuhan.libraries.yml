@@ -1,3 +1,9 @@
+jquery4-compat:
+  js:
+    scripts/jquery4-compat.js: { weight: -19 }
+  dependencies:
+    - core/jquery
+
 skuhan-framework:
   css:
     theme:
@@ -9,11 +15,11 @@ skuhan-framework:
     assets/libraries/typed.js/src/typed.js: {}
     assets/libraries/waypoints/waypoints.min.js: {}
     assets/libraries/jquery.counterup.js/jquery.counterup.min.js: {}
-#    assets/libraries/waypoints/waypoints.min.js: {}
   dependencies:
     - core/drupal
     - core/jquery
     - core/jquery.once
+    - skuhan/jquery4-compat
 
 global-scripts:
   js:
@@ -23,6 +29,8 @@ global-scripts:
     - core/jquery
     - core/drupalSettings
     - core/jquery.once
+    - skuhan/jquery4-compat
+    - skuhan/skuhan-framework
 
 # Uncomment for LESS source JavaScript files.
 #  js:

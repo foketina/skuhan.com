@@ -183,9 +183,12 @@ function skuhan_preprocess_captcha(&$variables) {
 }
 
 function skuhan_preprocess_container(&$variables) {
-  $theme = $variables['theme'];
-  $element = $variables['element'];
-  if ($theme['name'] == 'skuhan' && $element['#type'] == 'actions' && $element['#theme'] == 'webform_actions') {
+  $theme = $variables['theme'] ?? [];
+  $element = $variables['element'] ?? [];
+  $theme_name = $theme['name'] ?? '';
+  $element_type = $element['#type'] ?? '';
+  $element_theme = $element['#theme'] ?? '';
+  if ($theme_name == 'skuhan' && $element_type == 'actions' && $element_theme == 'webform_actions') {
     $variables['attributes']['class'][] = 'col-md-12';
     $variables['attributes']['class'][] = 'col-sm-12';
   }

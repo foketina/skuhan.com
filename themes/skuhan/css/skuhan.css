@@ -119,6 +119,11 @@ header.navbar-default {
   margin-bottom: 0;
 }
 
+.navbar.container, 
+.navbar.container-fluid {
+  margin-top: 0;
+}
+
 /*Back to top*/
 /* line 121, ../sass/base/_global.scss */
 .back-top {

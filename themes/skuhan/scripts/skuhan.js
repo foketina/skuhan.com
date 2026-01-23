@@ -52,7 +52,7 @@
   				skillbarActive();
   				skillbar_active = true;
   			}
-  			$(window).bind('scroll', function() {
+  			$(window).on('scroll', function() {
   				if (skillbar_active === false && isScrolledIntoView($('.about-skills')) === true) {
   					skillbarActive();
   					skillbar_active = true;

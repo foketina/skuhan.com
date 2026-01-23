@@ -21,6 +21,7 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
+  - skuhan/jquery4-compat
   - skuhan/global-scripts
 
 libraries-extend:
