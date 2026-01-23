@@ -65,7 +65,7 @@ if [ ! -f "$SETTINGS_FILE" ] || ! grep -q '\$databases\[.default.\]\[.default.\]
 /**
  * Config sync directory
  */
-\$settings['config_sync_directory'] = '../config/sync';
+\$settings['config_sync_directory'] = '/var/www/html/config/sync';
 
 /**
  * File paths
