@@ -1,0 +1,70 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: skuhan-app
+    restart: unless-stopped
+    environment:
+      - DB_HOST=${DB_HOST:-db}
+      - DB_PORT=${DB_PORT:-3306}
+      - DB_NAME=${DB_NAME:-drupal}
+      - DB_USER=${DB_USER:-drupal}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DRUPAL_HASH_SALT=${DRUPAL_HASH_SALT}
+      - DRUPAL_TRUSTED_HOST=${DRUPAL_TRUSTED_HOST:-^localhost$$}
+      - PHP_MEMORY_LIMIT=${PHP_MEMORY_LIMIT:-256M}
+      - PHP_UPLOAD_MAX_FILESIZE=${PHP_UPLOAD_MAX_FILESIZE:-64M}
+    volumes:
+      - drupal_files:/var/www/html/sites/default/files
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - internal
+      - coolify
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.skuhan.rule=Host(`${DOMAIN:-skuhan.com}`)"
+      - "traefik.http.routers.skuhan.entrypoints=https"
+      - "traefik.http.routers.skuhan.tls=true"
+      - "traefik.http.routers.skuhan.tls.certresolver=letsencrypt"
+      - "traefik.http.services.skuhan.loadbalancer.server.port=80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/user/login"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  db:
+    image: mariadb:10.11
+    container_name: skuhan-db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${DB_NAME:-drupal}
+      - MYSQL_USER=${DB_USER:-drupal}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - internal
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  drupal_files:
+    driver: local
+  db_data:
+    driver: local
+
+networks:
+  internal:
+    driver: bridge
+  coolify:
+    external: true
