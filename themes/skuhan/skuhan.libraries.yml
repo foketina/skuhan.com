@@ -11,7 +11,7 @@ skuhan-framework:
       css/style.css: {}
       css/skuhan.css: {}
   js:
-    assets/libraries/particles.js/particles.min.js: {}
+    assets/libraries/particles.js/particles.js: {}
     assets/libraries/typed.js/src/typed.js: {}
     assets/libraries/waypoints/waypoints.min.js: {}
     assets/libraries/jquery.counterup.js/jquery.counterup.min.js: {}
