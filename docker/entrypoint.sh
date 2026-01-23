@@ -59,6 +59,7 @@ if [ ! -f "$SETTINGS_FILE" ] || ! grep -q '\$databases\[.default.\]\[.default.\]
 \$settings['trusted_host_patterns'] = [
   '${DRUPAL_TRUSTED_HOST}',
   '^localhost\$',
+  '^.+\\.crimio\\.net\$',
 ];
 
 /**
