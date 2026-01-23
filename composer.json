@@ -1,33 +1,37 @@
 {
-    "name": "drupal/drupal",
-    "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+    "name": "skuhan/skuhan-site",
+    "description": "Skuhan.com - Personal Portfolio Website",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "require": {
-        "composer/installers": "^1.0.24",
+        "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.1",
         "drupal/fontyourface": "^4",
-        "drupal/context": "5.0.0-rc2",
+        "drupal/context": "^5.0",
         "drupal/paragraphs": "^1.14",
         "drupal/field_group": "^4",
         "drupal/views_fieldsets": "^4",
-        "drupal/webform": "^6.2",
+        "drupal/webform": "^6.3",
         "drupal/telephone_validation": "^2.3",
-        "drupal/captcha": "^1.2",
-        "drupal/recaptcha": "^3",
+        "drupal/captcha": "^2.0",
+        "drupal/recaptcha": "^3.5",
         "drupal/metatag": "^2.0",
         "drupal/token": "^1.10",
-        "drupal/google_analytics": "^4",
+        "drupal/google_analytics": "4.x-dev",
         "drush/drush": "^13",
-        "drupal/core-recommended": "^10",
-        "drupal/core-composer-scaffold": "^10",
-        "drupal/core-project-message": "^10",
-        "drupal/pathauto": "^1.11",
-        "drupal/bootstrap": "^3.24",
+        "drupal/core-recommended": "^11.3",
+        "drupal/core-composer-scaffold": "^11.3",
+        "drupal/core-project-message": "^11.3",
+        "drupal/pathauto": "^1.15",
+        "drupal/bootstrap": "^3.34",
         "drupal/menu_link_attributes": "^1.2",
-        "drupal/views_bootstrap": "^4.3",
-        "drupal/viewsreference": "2.0.0-beta10",
-        "drupal/social_media": "^2.0"
+        "drupal/views_bootstrap": "^5.5",
+        "drupal/viewsreference": "^2.0",
+        "drupal/social_media": "^2.0",
+        "drupal/upgrade_status": "^4",
+        "drupal/jquery_ui": "^1.8",
+        "drupal/jquery_ui_draggable": "^2.1",
+        "drupal/jquery_ui_resizable": "^2.1"
     },
     "extra": {
         "_readme": [
@@ -61,16 +65,7 @@
             ]
         }
     },
-    "autoload": {
-        "psr-4": {
-            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
-        }
-    },
     "repositories": {
-        "0": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
@@ -85,5 +80,7 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
