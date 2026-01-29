@@ -57,7 +57,7 @@ if [ ! -f "$SETTINGS_FILE" ] || ! grep -q '\$databases\[.default.\]\[.default.\]
  * Trusted host patterns
  */
 \$settings['trusted_host_patterns'] = [
-  '${DRUPAL_TRUSTED_HOST}',
+  '^(www\\.)?skuhan\\.com\$',
   '^localhost\$',
   '^.+\\.crimio\\.net\$',
 ];
